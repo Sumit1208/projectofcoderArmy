@@ -1,0 +1,33 @@
+/* Footer */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 2rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.contact-form input, 
+.contact-form textarea, 
+.contact-form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.contact-form button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}

@@ -1,0 +1,81 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    z-index: 11;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(108, 218, 108);
+    font-family: cursive;
+}
+
+/* Navigation Links - Desktop View */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #f0a500;
+}
+
+/* Hide Checkbox and Hamburger Icon for Large Screens */
+.menu-toggle {
+    display: none;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+}
+/* Mobile voew */
+@media (max-width: 436px) {
+    .nav-links {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        position: absolute;
+        z-index: 10;
+        top: 60px;
+        right: 10px;
+        background-color: #333;
+        padding: 1rem;
+        border-radius: 8px;
+        width: 200px;
+    }
+
+    /* Show hamburger icon */
+    .hamburger {
+        display: block;
+    }
+
+    /* When checkbox is checked, show nav links */
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}

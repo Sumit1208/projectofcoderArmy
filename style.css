@@ -1,0 +1,175 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: rgb(240, 236, 236);
+}
+
+
+/* Section Styling */
+section {
+    padding: 4rem 2rem;
+    margin: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 20px solid rgb(240, 236, 236);
+    border-radius: 10px;
+}
+.sectionc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#section1{
+    padding-top: 100px;
+}
+.p1{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+section:hover{
+    background-color: white;
+    border-color: white;
+}
+
+ .content{
+    display: flex;
+    gap:1.5rem;
+ }
+ .content img{
+    width: 25vw;
+    height: 35vh;
+ }
+ .content h2{
+    color: red;
+    font-size: 3.5rem;
+    font-family: cursive;
+    font-weight: bold;
+}
+.content  button{
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+}
+.content button:hover{
+    cursor: pointer;
+    background-color: blue;
+    border: 2px solid blue;
+    color: white;
+}
+
+.content p {
+    font-size: 1.5rem;
+}
+.navbar, .content, .footer {
+    width: 100vw;
+}
+
+/* Mobile View */
+@media (max-width: 436px) {
+    .nav-links {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        position: absolute;
+        z-index: 10;
+        top: 60px;
+        right: 10px;
+        background-color: #333;
+        padding: 1rem;
+        border-radius: 8px;
+        width: 200px;
+    }
+
+    /* Show hamburger icon */
+    .hamburger {
+        display: block;
+    }
+
+    /* When checkbox is checked, show nav links */
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+    section{
+        width: 100vw;
+        margin-left: 0;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .content img{
+        width: 100vw;
+    }
+    .navbar, .content, .footer {
+        width: 100vw;
+    }
+}
+/* Animations */
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Applying Animations */
+.reveal {
+    animation: reveal 1s ease-in-out forwards;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+.fade-in-right {
+    animation: fadeInRight 1s ease-in-out forwards;
+}
+
+/* Triggering Animations on Scroll */
+section:not(:first-of-type) {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+section:target {
+    opacity: 1;
+}

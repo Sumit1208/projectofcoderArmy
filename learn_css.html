@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./learn_css.css">
+    <link rel="stylesheet" href="./footer.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">beginnersAdda</div>
+            
+            <!-- Checkbox for the hamburger menu -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger1">&#9776;</label>
+    
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login">Log In</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- main -->
+     <main>
+        <div class="container">
+            <div class="Box sidebar">
+                <input type="checkbox" id="menu-toggle1" class="menu-toggle1">
+                <label for="menu-toggle1" class="hamburger1">&#9776;</label>
+                <!-- <h2>HTML Tutorial</h2> -->
+                <ul class="topics_link">
+                    <li><a href="#first">Introduction</a></li>
+                    <li><a href="#second">How To Add CSS</a></li>
+                    <li><a href="#third">CSS Selectors</a></li>
+                    <li><a href="#fourth">CSS Colors</a></li>
+                    <li><a href="#fifth">CSS Fonts</a></li>
+                    <li><a href="#sixth">CSS Box Model</a></li>
+                    <li><a href="#seventh">CSS Inline-block</a></li>
+                    <li><a href="#eight">CSS Position</a></li>
+                    <li><a href="#nine">Z-index</a></li>
+                    
+                </ul>
+            </div>
+            <div class="Box maincontent">
+                <!-- animation -->
+                <div class="text ">
+                    <div class="animate css-rainbow-text">
+                        <h1>CSS</h1>
+                    </div>
+                </div>
+                <section id="first" class="first section">
+                    <!-- Introduction to CSS -->
+                    <h2>CSS Introduction</h2>
+                    <p>CSS is the language we use to style a Web page.</p>
+                    <h3>What is CSS?</h3>
+                    <ul>
+                        <li>CSS stands for Cascading Style Sheets</li>
+                        <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+                        <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+                        <li>External stylesheets are stored in CSS files</li>
+                    </ul>
+                    
+                </section>
+                <section id="second" class="second section ">
+                    <!-- How to add CSS -->
+                    <h2>How To Add CSS</h2>
+                    <p>There are three ways of inserting a style sheet:</p>
+                    <ul>
+                        <li>Inline CSS</li>
+                        <li>Internal CSS</li>
+                        <li>External CSS</li>
+                    </ul>
+                    <!-- How to add inline CSS -->
+                    <h3>Inline CSS</h3>
+                    <p>Inline style (inside an HTML element)</p>
+                    <p>&lt;h1 <mark>style="color:blue;text-align:center;"</mark>&gt;This is a heading&lt;/h1&gt;</p>
+                    <p>&lt;p <mark>style="color:red;"</mark>&gt;This is a paragraph.&lt;/p&gt;</p>
+                    <!-- How to add internal CSS -->
+                    <h3>Internal CSS</h3>
+                    <p>The internal style is defined inside the &lt;style&gt; element, inside the head section.</p>
+                    <code>
+                        &lt;!DOCTYPE html&gt;<br>
+                        &lt;html&gt;<br>
+                        &lt;head&gt;<br>
+                        &lt;style&gt;<br>
+                        body {<br>
+                          background-color: linen;<br>
+                        }<br>
+                        
+                        h1 {<br>
+                          color: maroon;<br>
+                          margin-left: 40px;<br>
+                        }<br>
+                        &lt;/style&gt;<br>
+                        &lt;/head&gt;<br>
+                        &lt;body&gt;<br>
+                        
+                        &lt;h1&gt;This is a heading&lt;/h1&gt;<br>
+                        &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+                        
+                        &lt;/body&gt;<br>
+                        &lt;/html&gt;<br>
+                    </code>
+                    <!-- How to add External CSS -->
+                    <h3>External CSS</h3>
+                    <p>With an external style sheet, you can change the look of an entire website by changing just one file!</p>
+                    <p>Each HTML page must include a reference to the external style sheet file inside the &lt;link&gt; element, inside the head section.</p>
+                    <code>
+                        &lt;!DOCTYPE html&gt;<br>
+                        &lt;html&gt;<br>
+                        &lt;head&gt;<br>
+                        <mark>&lt;link rel="stylesheet" href="mystyle.css"&gt;</mark><br>
+                        &lt;/head&gt;<br>
+                        &lt;body&gt;<br>
+                        &lt;h1&gt;This is a heading&lt;/h1&gt;<br>
+                        &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+                        &lt;/body&gt;<br>
+                        &lt;/html&gt;<br>
+                    </code>
+                </section>
+                <section id="third" class="third section">
+                    <!-- Selectors in CSS -->
+                    <h2>CSS Selectors</h2>
+                    <p>A CSS selector selects the HTML element(s) you want to style.</p>
+                    <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
+                    <img src="./images/CSS_selector.png" alt="selector">
+                    <!-- select by class -->
+                    <h3>CSS Class Selector</h3>
+                    <p>The CSS .class selector is used to select all elements that belong to a specific class attribute.</p>
+                    <p>Syntax:-</p>
+                    <code>
+                        .class { <br>
+                            // CSS property <br>
+                        } 
+                    </code>
+                    <!-- Select by Id -->
+                    <h3>CSS Id Selector</h3>
+                    <p>The CSS #id selector is used to apply styles to a specific element identified by its unique id attribute in an HTML document.</p>
+                    <p>Syntax:-</p>
+                    <code>
+                        #id {<br>
+                            /* CSS properties */<br>
+                            color: blue;<br>
+                            font-size: 16px;<br>
+                        }
+                    </code>
+                    <!-- Select by an element -->
+                    <h3>CSS element Selector</h3>
+                    <p>The element selector selects HTML elements based on the element name.</p>
+                    <p>Syntax:-</p>
+                    <code>
+                        p {<br>
+                            text-align: center;<br>
+                            color: red;<br>
+                          }
+                    </code>
+                    <!-- unerversal selector -->
+                    <h3>Universal Selector</h3>
+                    <p>The Universal selector (*) in CSS is used to select all the elements in an HTML document.</p>
+                    <p>Syntax:-</p>
+                    <code>
+                        * {<br>
+                            color: white;<br>
+                            background-color: black;<br>
+                        }
+                    </code>
+                    <!-- grpup selector -->
+                    <h3>Group Selector</h3>
+                    <p>The Group selector is used to style all comma-separated elements with the same style.</p>
+                    <p>Syntax:-</p>
+                    <code>
+                        #div-container, .paragraph-class, h1{ <br>
+                            color: white;<br>
+                            background-color: purple;<br>
+                            font-family: monospace;  <br>
+                        }
+                    </code>
+                    <!-- select by attribute -->
+                    <h3>Attribute Selector</h3>
+                    <p>Syntax:-</p>
+                    <code>
+                        [href] {<br>
+                            background-color: lightgreen;<br>
+                            color: black;<br>
+                            font-family: monospace;<br>
+                            font-size: 1rem;<br>
+                        }
+                    </code>
+                </section>
+                <section id="fourth" class="fourth section">
+                    <!-- color ins CSS -->
+                    <h2>CSS Colors</h2>
+                    <p>Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.</p>
+                    <!-- RGB colors -->
+                    <h3>CSS RGB Colors</h3>
+                    <p>An RGB color value represents RED, GREEN, and BLUE</p>
+                    <p>The RGB (Red, Green, Blue) format is used to define the color of an HTML element by specifying the R, G, and B values range between 0 to 255.</p>
+                    <p><mark>color: rgb(0-255, 0-255, 0-255);</mark></p>
+                    <!-- RGBA: A used for transparency -->
+                    <p><b>RGBA Format</b></p>
+                    <p>The RGBA format is similar to the RGB, but it includes an Alpha component that specifies the transparency of elements.</p>
+                    <p><mark>color: rgba(0-255, 0-255, 0-255, 0-1);</mark></p>
+                    <!-- Hexadecimal color -->
+                    <h3>CSS Hexadecimal color</h3>
+                    <p>A hexadecimal color is specified with: #RRGGBB, where the RR (red), GG (green) and BB (blue) hexadecimal integers specify the components of the color.</p>
+                    <p><mark>color:#3c3c3c</mark></p>
+                    <!-- HSl Colors -->
+                    <h3>CSS HSL Colors</h3>
+                    <p>HSL stands for Hue, Saturation, and Lightness respectively</p>
+                    <p>In CSS, a color can be specified using hue, saturation, and lightness (HSL) in the form</p>
+                    <p><b>hsl(hue, saturation, lightness)</b></p>
+                    <p><mark>Hue</mark> is the color type (a degree on the color wheel from 0 to 360)</p>
+                    <p><mark>Saturation</mark> is the intensity of the color (0% is grayscale,100% is fully saturated)</p>
+                    <p><mark>Lightness</mark> defines how light or dark the color is (0% is black, 100% is white)</p>
+                    <!-- Background color -->
+                    <h3>Background Color</h3>
+                    <p>The background-color property sets the background color of an element.</p>
+                    <p>Example:-</p>
+                    <code>
+                        background-color: red;  <br>
+                        
+                        background-size: cover; <mark>to cover entire element</mark><br>
+                        background-repeat: no repeat; <mark>Prevents the image from repeating</mark><br>
+                    </code>
+                </section>
+                <section id="fifth" class="fifth section">
+                    <!-- fonts in CSS -->
+                    <h2>CSS Fonts</h2>
+                    <!-- font-family -->
+                    <h3>font-family</h3>
+                    <p>we use the font-family property to specify the font of a text.</p>
+                    <p>Syntax:-</p>
+                    <code>
+                        font-family: "font family name";
+                    </code>
+                    <!-- font-size -->
+                    <h3>font-size</h3>
+                    <p>The font-size property sets the size of the text.</p>
+                    <!-- font size with px -->
+                    <h4>font Size with px</h4>
+                    <p>pixel size is determined by your device silze</p>
+                    <!-- font size with em -->
+                    <h4>font size with em</h4>
+                    <p>em size is reltive to parent font size</p>
+                    <!-- font size with rem -->
+                    <h4>font size with rem</h4>
+                    <p>rem size is relative to HTML font size</p>
+                    <!-- viewport size -->
+                    <h4>viewport size</h4>
+                    <!-- viewport width -->
+                    <p>viewport width:- width decided by viewport</p>
+                    <p>Syntax:-</p>
+                    <code>
+                        .container{ <br>
+                            width: 80vw;<br>
+                        }
+                    </code>
+                    <!-- viewport height -->
+                    <p>viewport height:- height decided by viewport</p>
+                    <p>Syntax:-</p>
+                    <code>
+                        .container{ <br>
+                            width: 80vh;<br>
+                        }
+                    </code>
+                    <!-- font-weight -->
+                    <h3>font-weight</h3>
+                    <p>It is used to set the boldness of the font. Its value can be “normal, bold, lighter, bolder”.</p>
+                    <p>Syntax:-</p>
+                    <code>
+                        font-weight: font weight value;<br>
+                        numerical value from 100 to 900
+                    </code>
+                    <!-- font style -->
+                    <h3>font-style</h3>
+                    <p>It is used to specify the font style of an HTML element. It can be “normal, italic or oblique”.</p>
+                    <p>Syntax:-</p>
+                    <code>
+                        font-style: style name;
+                    </code>
+                </section>
+                <section id="sixth" class="sixth section">
+                    <!-- CSS Box Model -->
+                    <h2>CSS Box Model</h2>
+                    <p>The CSS Box Model is a layout model that describes how different components of a web element <b>(content, padding, border, and margin)</b>are structured and positioned.</p>
+                    <p>you can see css box model by inspet your webpage</p>
+                    <!-- Key components of Box Model -->
+                    <h3>Key Components of the Box Model</h3>
+                    <ol>
+                        <!-- contente area in Box Model -->
+                        <li> <b> Content Area</b>
+                            <ul>
+                                <li>The content area is where the actual content, such as text, images, or other media, is displayed.</li>
+                                <li>It is sized using the width and height properties.</li>
+                                <li>The boundary of the content area is known as the content edge.</li>
+                            </ul>
+                        </li>
+                        <!-- Padding Arean in Box Model -->
+                        <li><b> Padding Area</b>
+                            <ul>
+                                <li>The padding surrounds the content area and creates space inside the border.</li>
+                                <li>It can be adjusted using the padding property (or padding-top, padding-right, padding-bottom, and padding-left for individual sides).</li>
+                                <li>The padding area increases the overall size of the element without changing the content area.</li>
+                            </ul>
+                        </li>
+                        <!-- Border Area in Box Model -->
+                        <li> <b> Border Area</b>
+                            <ul>
+                                <li>The border wraps around the padding and content, defining the edge of the element.</li>
+                                <li>It can be styled using properties such as border width border <b>color, border style, and border-color</b>.</li>
+                                <li>The padding area increases the overall size of the element without changing the content area.</li>
+                            </ul>
+                        </li>
+                        <!-- Margin area in Box Model -->
+                        <li> <b>Margin Area</b>
+                            <ul>
+                                <li>TThe margin is the outermost space that separates the element from adjacent elements.</li>
+                                <li>It can be set using the margin property (or margin-top, margin-right, margin-bottom, and margin-left for individual sides).</li>
+                                <li>Unlike padding and bordborderse margin does not increase the element’s total size but affects its placement on the page</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <!-- Image of Box Model -->
+                    <img src="./images/box-model.png" alt="box-model">
+                </section>
+                <section id="seventh" class="seventh section">
+                    <!-- display property of inline & block in CSS -->
+                    <h2>CSS Inline-block</h2>
+                    <!-- display property inline -->
+                    <h3>inline</h3>
+                    <p>If you put the display property inline on block-level element this property makes inline of block-level element</p>
+                    <code>
+                        display:inline;
+                    </code>
+                    <!-- display propery block -->
+                    <h3>block</h3>
+                    <p>With the help of this element, inline element behave like block-level element</p>
+                    <code>
+                        display:block;
+                    </code>
+                    <!-- display property inline-block -->
+                    <h3>inline-block</h3>
+                    <p>with the help of this element we can give height and width to inline element but behave inline</p>
+                    <code><p>display:inline-block;</p></code>
+                    <!-- image of inline-block -->
+                    <img src="./images/inline-block.png" alt="inline-block">
+                    
+                </section>
+                <section id="eight" class="eight section">
+                    <!-- Position in CSS -->
+                    <h2>CSS Positioning Elements</h2>
+                    <p>The <b>position</b> property specifies the type of positioning method used for an element</p>
+                    <p>There are five different types of position properties available in CSS:</p>
+                    <ul>
+                        <!-- 5 display property -->
+                        <li>static</li>
+                        <li>relative</li>
+                        <li>absolute</li>
+                        <li>fixed</li>
+                        <li>sticky</li>
+                    </ul>
+                    <!-- static -->
+                    <h3>static</h3>
+                    <p>HTML elements are positioned static by default.</p>
+                    <p> Elements with position: static are positioned according to the normal flow of the document.</p>
+                    <p>Example:</p>
+                    <code>
+                        div.static {<br>
+                            position: static;<br>
+                            // aplly more css poperty <br>
+                          }
+                    </code>
+                    <!-- relative -->
+                    <h3>relative</h3>
+                    <p>When position is relative, the element reserve your space but move anyhere</p>
+                    <p>Example:</p>
+                    <code>
+                        div.relative {<br>
+                            position: relative;<br>
+                            // aplly more css poperty <br>
+                          }
+                    </code>
+                    <!-- absolute -->
+                    <h3>absolute</h3>
+                    <p>whan position is absolute, Anyone can come to the element space and element get the move done anywhere.</p>
+                    <p>Example:</p>
+                    <code>
+                        div.absolute { <br>
+                            position: absolute; <br>
+                            // aplly more css poperty <br>
+                          }
+                    </code>
+                    <!-- fixed -->
+                    <h3>fixed</h3>
+                    <p>An element with position: fixed; which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.</p>
+                    <p>Example:</p>
+                    <code>
+                        div.fixed {<br>
+                            position: fixed;<br>
+                            // aplly more css poperty <br>
+                          }
+                    </code>
+                    <!-- sticky -->
+                    <h3>sticky</h3>
+                    <p>Combines features of position: relative and position: fixed</p>
+                    <p>when position is sticky, the element is fixed based on parent element</p>
+                    <p>Example:</p>
+                    <code>
+                        div.sticky {<br>
+                            position: sticky;<br>
+                            // aplly more css poperty <br>
+                          }
+                    </code>
+                </section>
+                <section id="nine" class="nine section">
+                    <!-- z-index -->
+                    <h3>Z-index</h3>
+                    <p>The z-index property controls which elements appear in front or behind others when they overlap.</p>
+                    <p>An element with a higher z-index value will appear on top, while one with a lower value will be behind.</p>
+                    <p>Syntax:-</p>
+                    <code>
+                        z-index: auto | number | initial | inherit;
+                    </code>
+                    <p><mark>Note:-</mark> z-index only works on elements with a position value of relative, absolute, fixed, or sticky.</p>
+                </section>
+                <!-- footer -->
+                <div class="footerr">
+                    <footer id="contact" class="footer">
+                        <form class="contact-form">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" required></textarea>
+                
+                            <button type="submit">Submit</button>
+                        </form>
+                    </footer>
+                </div>
+            </div>
+        </div>
+     </main>
+      
+</body>
+</html>

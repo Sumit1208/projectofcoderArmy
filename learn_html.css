@@ -1,0 +1,162 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    width: 100vw;
+    padding-top: 65px;
+}
+
+.sidebar {
+    background-color: #333;
+    padding-bottom: 1rem;
+    color: white;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+/* Navigation Links - Desktop View */
+.topics_link {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.topics_link li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;  
+}
+
+.topics_link  li a:hover {
+    color: #f0a500;
+}
+
+/* Hide Checkbox and Hamburger Icon for Large Screens */
+.menu-toggle1 {
+    display: none;
+}
+
+/* Hamburger Icon */
+.hamburger1 {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* animation HTML Heading */
+.text{
+    width: 100%;
+}
+/* rainbow color for text */
+.animate {
+    background: linear-gradient(90deg, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2b, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d4ff, #0af, #007fff, #05f, #002bff, #00f, #2a00ff, #50f, #7f00ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    height: 5rem;
+    width: 16rem;
+    position: relative;
+    animation-name: html;
+    animation-duration:16s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+}
+.animate h1{
+   font-size: 5rem;
+}
+@keyframes html {
+    from{
+        transform: translate(0px);
+    }
+
+    to{
+        transform:  translate(100vw);
+    }
+}
+/* Main Content of HTML */
+.maincontent{
+    padding-top: 2rem;
+    width: 100%;
+}
+/* section property */
+section{
+    width: 100%;
+    padding-left: 2rem;
+    padding-top: 6rem;
+    /* position: relative; */
+}
+section h2{
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+section h3{
+    padding: 0.5rem 0;
+}
+section ul, ol{
+    padding-left: 1rem;
+}
+section p{
+    font-size: 1rem;
+    line-height: 1.8;
+}
+section table, th, td{
+    border: 1px solid black;
+}
+.section img{
+    width: 85vw;
+    height: auto;
+}
+@media (max-width: 436px) {
+     .container{
+        width: 100%;
+        height: 100%;
+     }
+    .topics_link {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        position: absolute;
+        z-index: 9;
+        left: 5px;
+        background-color: #333;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+        gap: 1rem;
+        border-radius: 8px;
+        width: 180px;
+    }
+    /* change property of animation */
+    .animate{
+        height: 3rem;
+        width: 8rem;
+        margin-top: 1rem;
+        border-radius: 5px;
+        background-color: aquamarine;
+        position: relative;
+        animation-name: html;
+        animation-duration:16s;
+        animation-timing-function:linear;
+        animation-iteration-count: infinite;
+    }
+    .animate h1{
+        font-size: 2.5rem;
+    }
+    /* Show hamburger icon */
+    .hamburger1 {
+        display: block;
+    }
+
+    /* When checkbox is checked, show nav links */
+    .menu-toggle1:checked ~ .topics_link {
+        display: flex;
+    }
+}

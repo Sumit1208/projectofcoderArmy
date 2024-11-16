@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beginnersAdda</title>
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./footer.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+    <nav class="navbar">
+        <div class="logo">beginnersAdda</div>
+        
+        <!-- Checkbox for the hamburger menu -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#login">Log In</a></li>
+            <li><a href="#signup">Sign Up</a></li>
+        </ul>
+    </nav>
+    </header>
+
+     <!-- First Section with Reveal Animation -->
+     <section id="section1" class="reveal section1">
+        <div class="content">
+            <img src="./images/section1a.webp" alt="Image 1">
+            <div class="section1c sectionc">
+                <p class="p1">Welcome to the beginnersAdda.</p>
+                <p>Creating websites or web applications, including the project's design, layout, coding, content creation, and functionality.</p>
+            </div>
+            
+            <img src="./images/section1.jpg" alt="Image 2">
+            
+        </div>
+    </section>
+
+    <!-- Second Section with Left-Side Fade-In Animation -->
+    <section id="section2" class="fade-in-left">
+        <div class="content">
+            <img src="./images/html1.jpg" alt="Image 3">
+            <div class="section2c sectionc">
+                <h2>HTML</h2>
+                <p>HTML is the standard markup language for creating Web pages.</p>
+                <p>Tim Berners-Lee, a British physicist and scientist, invented HTML in 1991:</p>
+                <a href="./learn_html.html"><button>Learn HTML</button></a>
+            </div>
+            <img src="./images/htmlfounder.jpg" alt="Image 4">
+            
+        </div>
+    </section>
+
+    <!-- Third Section with Right-Side Fade-In Animation -->
+    <section id="section3" class="fade-in-right">
+        <div class="content">
+            <img src="./images/css.jfif" alt="Image 5">
+            <div class="section3c sectionc">
+                <h2>CSS</h2>
+                <p>CSS is the language we use to style a Web page.</p>
+                <p>HÃ¥kon Wium Lie proposed the idea of CSS in 1994.</p>
+                <a href="./learn_css.html"><button>Learn CSS</button></a>
+            </div>
+            
+            <img src="./images/cssfounder11.jpg" alt="Image 6">
+        </div>
+    </section>
+    <!-- footer -->
+    <footer id="contact" class="footer">
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </footer>
+
+</body>
+</html>
